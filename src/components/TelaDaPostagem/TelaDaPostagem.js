@@ -1,11 +1,12 @@
 import React from 'react'
-import {ContainerPostagem, Image, Description} from './styles'
+import {ContainerPostagem, Image, Description, Title} from './styles'
 
-const TelaDaPostagem = () => {
+const TelaDaPostagem = (props) => {
   return (
     <ContainerPostagem>
-            <Image src={"https://picsum.photos/536/354"} alt='drone view'/>
-            <Description>{'Lorem Ipsum'}</Description>
+            <Image src={props.inputImage} alt='drone view'/>
+            <Title>{props.inputTitle}</Title>
+            <Description>{props.inputDescription}</Description>
     </ContainerPostagem>
   )
 }
